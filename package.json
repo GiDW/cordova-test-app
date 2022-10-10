@@ -22,7 +22,16 @@
   "scripts": {
     "lint": "eslint --ext .js,.cjs,.mjs,.ts,.cts,.mts,.jsx,.tsx .",
     "prettier": "prettier -w .",
-    "prettier-check": "prettier -c ."
+    "prettier-check": "prettier -c .",
+    "prepare": "cordova prepare",
+    "prepare-ios": "cordova prepare ios",
+    "prepare-android": "cordova prepare android",
+    "prepare-browser": "cordova prepare browser",
+    "build": "cordova build",
+    "build-debug": "cordova build --debug",
+    "build-release": "cordova build --release",
+    "build-ios": "cordova build ios",
+    "clean": "rm -rf platforms plugins"
   },
   "cordova": {
     "platforms": [

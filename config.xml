@@ -5,10 +5,12 @@
     <author email="developer@web.dev" href="https://web.dev">App developer</author>
     <content src="index.html" />
     <platform name="ios">
-        <hook src="scripts/ios_info_plist.js" type="after_prepare" />
-        <hook src="scripts/ios_remove_launch_images.js" type="after_prepare" />
-        <hook src="scripts/ios_webview.js" type="after_prepare" />
-        <hook src="scripts/ios_before_build.js" type="before_build" />
+        <hook src="scripts/script.js" type="before_prepare" />
+        <hook src="scripts/script.js" type="before_build" />
+        <!-- <hook src="scripts/ios_info_plist.js" type="after_prepare" /> -->
+        <!-- <hook src="scripts/ios_remove_launch_images.js" type="after_prepare" /> -->
+        <!-- <hook src="scripts/ios_webview.js" type="after_prepare" /> -->
+        <!-- <hook src="scripts/ios_before_build.js" type="before_build" /> -->
         <preference name="target-device" value="universal" />
         <preference name="deployment-target" value="12.0" />
         <preference name="Suppresses3DTouchGesture" value="true" />
