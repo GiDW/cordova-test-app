@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget android-versionCode="1" id="be.basalte.app" ios-CFBundleVersion="1" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>Test App</name>
+    <description>Cordova test app</description>
+    <author email="developer@web.dev" href="https://web.dev">App developer</author>
+    <content src="index.html" />
+    <platform name="ios">
+        <hook src="scripts/ios_info_plist.js" type="after_prepare" />
+        <hook src="scripts/ios_remove_launch_images.js" type="after_prepare" />
+        <hook src="scripts/ios_webview.js" type="after_prepare" />
+        <hook src="scripts/ios_before_build.js" type="before_build" />
+        <preference name="target-device" value="universal" />
+        <preference name="deployment-target" value="12.0" />
+        <preference name="Suppresses3DTouchGesture" value="true" />
+        <preference name="SuppressesLongPressGesture" value="true" />
+        <preference name="CordovaWebViewEngine" value="CDVWKWebViewEngine" />
+        <preference name="EnableViewportScale" value="false" />
+        <preference name="KeyboardDisplayRequiresUserAction" value="true" />
+        <preference name="WKWebViewOnly" value="true" />
+    </platform>
+    <platform name="android">
+        <hook src="scripts/android_after_prepare.js" type="after_prepare" />
+        <preference name="android-minSdkVersion" value="22" />
+        <preference name="fullscreen" value="false" />
+        <preference name="AndroidXEnabled" value="true" />
+    </platform>
+    <platform name="browser">
+    </platform>
+</widget>
